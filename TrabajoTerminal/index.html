@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechNews</title>
+  <title>Air Clear</title>
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ <!-- Animate.css -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -25,289 +28,426 @@
     </nav>
 
   </div>
+  <div id="map"></div>
 
 
   <div class="container">
     <!-- Navigation -->
     <nav class="nav-main">
       <!-- Brand -->
-      <img src="imagenes/logott.png" alt="Air Clear Logo" class="nav-brand">
+      <img src="imagenes/logo.png" alt="Air Clear Logo" class="nav-brand">
       <!-- Left Nav -->
       <ul class="nav-menu">
-        <li>
-          <a href="#">Web Development</a>
-        </li>
-        <li>
-          <a href="#">Blockchain</a>
-        </li>
-        <li>
-          <a href="#">Machine Learning</a>
-        </li>
-        <li>
-          <a href="#">Artificial Intelligence</a>
-        </li>
-        <li>
-          <a href="#">Quantum Computing</a>
-        </li>
-        <li>
-          <a href="#">Startup</a>
-        </li>
-        <li>
-          <a href="#">Cryptocurrencies</a>
-        </li>
-        <li>
-          <a href="#">More</a>
-        </li>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#monitoring">Monitoreo</a></li>
+        <li><a href="#recommendations">Recomendaciones</a></li>
+        <li><a href="#statistics">Estadísticas</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
-
-      <!-- Right Nav -->
-      <ul class="nav-menu-right">
-        <li>
-          <a href="#">
-            <i class="fas fa-search"></i>
-          </a>
-        </li>
-      </ul>
+      
     </nav>
     <hr>
 
     <!-- SHOWCASE -->
+    <section id="home">
     <header class="showcase">
-      <h2>Big News Today!</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolor laudantium rerum, excepturi est praesentium
-        natus qui? Tempora rerum, numquam inventore eligendi in, nostrum reprehenderit, eum cumque fugit eaque
-        similique!</p>
-      <a href="#" class="btn">
+
+      <h2 style="font-size: 40px; margin-top: 30px;">¿Conoces la calidad del aire de tu colonia?</h2>
+      <p>Aquí conocerás la calidad del aire de nuestras sedes principales. 
+        Descubre cómo mantenemos un ambiente saludable en cada ubicación y toma medidas informadas para tu bienestar. ¡Comienza a explorar ahora mismo!</p>
+      <!-- <a href="#" class="btn">
         SignUp <i class="fas fa-chevron-right"></i>
-      </a>
+      </a> -->
+      <img src="imagenes/mapa.png" alt="Imagen superpuesta" class="superpuesta">
+      
+      
+      <div class="animated-marker1 tooltip">
+        <lord-icon
+        src="https://cdn.lordicon.com/tdtlrbly.json"
+        trigger="hover"
+        colors="primary:#121331,secondary:#c71f16"
+        style="width:100px;height:100px;"
+        title="Sensor en Dirección 1">
+        
+    </lord-icon>
+<span class="tooltiptext"style="left: 140%; top:20%">UPIITA IPN  <br>
+  Av Instituto Politécnico Nacional 2580, La Laguna Ticoman, Gustavo A. Madero, 07340 Ciudad de México, CDMX</span>
+      </div>
+      <div class="animated-marker2 tooltip">
+        <lord-icon
+        src="https://cdn.lordicon.com/tdtlrbly.json"
+        trigger="hover"
+        colors="primary:#121331,secondary:#c71f16"
+        style="width:100px;height:100px;"
+        title="Sensor en Dirección 1">
+    </lord-icon>
+    <span class="tooltiptext" style="left: -170%;">ESCOM IPN <br> Unidad Profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, 07320 Ciudad de México, CDMX</span>
+      </div>
+
+    </div>
+    <div class="animated-marker3 tooltip">
+      <lord-icon
+      src="https://cdn.lordicon.com/tdtlrbly.json"
+      trigger="hover"
+      colors="primary:#121331,secondary:#c71f16"
+      style="width:100px;height:100px;"
+      title="Sensor en Dirección 1">
+  </lord-icon>
+  <span class="tooltiptext" style="left: 140%; top: -30%;">CDA <br>Belisario Domínguez 22, Centro Histórico de la Cdad. de México, Las Ranas, Cuauhtémoc, 06010 Ejido del Centro, CDMX</span>
+    </div>
+      
     </header>
+  </section>
+    
+  <section id="monitoring">
+      <div class="quality-status-row">
+        <div class="quality-status">
+          <div class="quality-circle good"></div>
+          <span>Buena</span>
+        </div>
+        <div class="quality-status">
+          <div class="quality-circle acceptable"></div>
+          <span>Aceptable</span>
+        </div>
+        <div class="quality-status">
+          <div class="quality-circle regular"></div>
+          <span>Regular</span>
+        </div>
+        <div class="quality-status">
+          <div class="quality-circle poor"></div>
+          <span>Mala</span>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="column">
+          <div class="donut-set">
+            <div class="general-title">UPIITA</div>
+            <div class="donut-container">
+              <canvas id="ubicacion-sensores-1"></canvas>
+              <div class="donut-label">Sensor 1</div>
+            </div>
+          </div>
+
+          <div class="donut-set">
+            <div class="general-title">Partículas</div>
+            <div class="donut-container">
+              <canvas id="pm1-1"></canvas>
+              <div class="donut-label">PM1</div>
+            </div>
+            <div class="donut-container">
+              <canvas id="pm25-1"></canvas>
+              <div class="donut-label">PM2.5</div>
+            </div>
+            <div class="donut-container">
+              <canvas id="pm10-1"></canvas>
+              <div class="donut-label">PM10</div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="donut-set">
+            <div class="general-title">ESCOM</div>
+            <div class="donut-container">
+              <canvas id="ubicacion-sensores-2"></canvas>
+              <div class="donut-label">Sensor 2</div>
+            </div>
+          </div>
+          <div class="donut-set">
+            <div class="general-title">Partículas</div>
+            <div class="donut-container">
+              <canvas id="pm1-2"></canvas>
+              <div class="donut-label">PM1</div>
+            </div>
+            <div class="donut-container">
+              <canvas id="pm25-2"></canvas>
+              <div class="donut-label">PM2.5</div>
+            </div>
+            <div class="donut-container">
+              <canvas id="pm10-2"></canvas>
+              <div class="donut-label">PM10</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="donut-set">
+            <div class="general-title">CDA</div>
+            <div class="donut-container">
+              <canvas id="ubicacion-sensores-3"></canvas>
+              <div class="donut-label">Sensor 3</div>
+            </div>
+          </div>
+          <div class="donut-set">
+            <div class="general-title">Partículas</div>
+            <div class="donut-container">
+              <canvas id="pm1-3"></canvas>
+              <div class="donut-label">PM1</div>
+            </div>
+            <div class="donut-container">
+              <canvas id="pm25-3"></canvas>
+              <div class="donut-label">PM2.5</div>
+            </div>
+            <div class="donut-container">
+              <canvas id="pm10-3"></canvas>
+              <div class="donut-label">PM10</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+
+
 
     <!-- NEWS CARDS -->
+    <section id="recommendations">
     <div class="news-cards">
-      <div>
-        <img src="img/news1.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div>
-        <img src="img/news2.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div>
-        <img src="img/news3.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div>
-        <img src="img/news4.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
+      <div class="container">
+        <h2>Recomendaciones según la calidad del aire</h2>
+        <div id="recommendation-cards" class="cards-container">
+          <div class="card">
+            <img src="imagenes/8.png" alt="Recomendación 1">
+  
+          </div>
+          <div class="card">
+            <img src="imagenes/7.png" alt="Recomendación 2">
+       
+          </div>
+          <div class="card">
+            <img src="imagenes/6.png" alt="Recomendación 3">
+          
+          </div>
+          <div class="card">
+            <img src="imagenes/5.png" alt="Recomendación 4">
+           
+          </div>
+        </div>
       </div>
     </div>
+    
 
-    <!-- Card Banner 1-->
-    <section class="cards-banner-one">
-      <div class="content">
-        <h2>Lorem, ipsum dolor.</h2>
-        <!-- lorem 20 -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat maxime facilis quasi alias illo, fugiat
-          cupiditate porro dolores tenetur delectus!</p>
-        <a href="#" class="btn">Learn More<i class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
+  </section>
+  <section id="statistics">
 
-    <!-- NEWS CARDS -->
-    <div class="news-cards">
-      <div>
-        <img src="img/news1.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div>
-        <img src="img/news2.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div>
-        <img src="img/news3.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-      <div>
-        <img src="img/news4.jpg" alt="" />
-        <h3>Lorem, ipsum dolor.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore fugit esse corporis nesciunt minima
-          doloremque modi mollitia rerum, similique optio eligendi itaque amet qui ullam vel incidunt asperiores fuga?
-        </p>
-        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
-      </div>
-    </div>
+  </section>
 
-    <!-- third card -->
-    <section class="cards-banner-two">
-      <div class="content">
-        <h2>Lorem, ipsum dolor.</h2>
-        <!-- lorem 30 -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut qui laudantium id quam magni accusantium,
-          veritatis, ipsam labore, reprehenderit dolore repudiandae nemo sint deserunt! Suscipit facilis qui inventore
-          consequatur fugit.</p>
-        <a href="#" class="btn">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
-
-    <!-- Follow -->
-    <section class="social">
-      <p>Follow TechNews</p>
-      <div class="links">
-        <a href="https://facebook.com">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://twitter.com">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://linkdin.com">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </section>
-  </div>
 
   <!-- Footer Links -->
+  <section id="contact">
   <div class="footer-links">
     <div class="footer-container">
       <ul>
         <li>
           <a href="#">
-            <h3>Title One</h3>
+            <h3>Contacto</h3>
           </a>
         </li>
         <li>
-          <a href="#">Blockchain</a>
+          <a href="#"> Email: anamoura1600@alumno.ipn.mx</a>
         </li>
         <li>
-          <a href="#">Machine Learning</a>
-        </li>
-        <li>
-          <a href="#">Artificial Intelligence</a>
-        </li>
-        <li>
-          <a href="#">Quantum Computing</a>
-        </li>
-        <li>
-          <a href="#">Startup</a>
-        </li>
-        <li>
-          <a href="#">Cryptocurrencies</a>
+          <a href="#"> Tel: +52 55 31820036</a>
         </li>
       </ul>
       <ul>
         <li>
           <a href="#">
-            <h3>Title Two</h3>
+            <h3>Secciones</h3>
           </a>
         </li>
         <li>
-          <a href="#">Blockchain</a>
+          <a href="#"> Inicio</a>
         </li>
         <li>
-          <a href="#">Machine Learning</a>
+          <a href="#monitoring"> Monitoreo</a>
         </li>
         <li>
-          <a href="#">Artificial Intelligence</a>
+          <a href="#recommendations"> Recomendaciones</a>
         </li>
         <li>
-          <a href="#">Quantum Computing</a>
-        </li>
-        <li>
-          <a href="#">Startup</a>
-        </li>
-        <li>
-          <a href="#">Cryptocurrencies</a>
+          <a href="#statistics"> Estadisticas</a>
         </li>
       </ul>
       <ul>
         <li>
           <a href="#">
-            <h3>Title Three</h3>
+            <h3>Dirección</h3>
           </a>
         </li>
         <li>
-          <a href="#">Blockchain</a>
-        </li>
-        <li>
-          <a href="#">Machine Learning</a>
-        </li>
-        <li>
-          <a href="#">Artificial Intelligence</a>
-        </li>
-        <li>
-          <a href="#">Quantum Computing</a>
-        </li>
-        <li>
-          <a href="#">Startup</a>
-        </li>
-        <li>
-          <a href="#">Cryptocurrencies</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="#">
-            <h3>Title Four</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#">Blockchain</a>
-        </li>
-        <li>
-          <a href="#">Machine Learning</a>
-        </li>
-        <li>
-          <a href="#">Artificial Intelligence</a>
-        </li>
-        <li>
-          <a href="#">Quantum Computing</a>
-        </li>
-        <li>
-          <a href="#">Startup</a>
-        </li>
-        <li>
-          <a href="#">Cryptocurrencies</a>
+          <a href="#">  Av Instituto Politécnico Nacional 2580, La Laguna Ticoman, Gustavo A. Madero, 07340 Ciudad de México, CDMX</a>
         </li>
       </ul>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <h3>Tech News Copyright</h3>
-  </footer>
-
+</div>
+</section>
   <!-- Scroll Reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="main.js"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script>
+    // Datos para los gráficos (ejemplo)
+    const dataUbicacionSensores = {
+      datasets: [{
+        data: [1, 2], // Ajusta estos datos según tus ubicaciones de sensores
+        backgroundColor: ['#5cb85c', '#d3d3d3'] // Azul y Naranja para UPIITA
+      }],
+    };
+  
+    const dataUbicacionSensoresESCOM = {
+      datasets: [{
+        data: [1, 2], // Ajusta estos datos según tus ubicaciones de sensores
+        backgroundColor: ['#FFA500', '#d3d3d3'] // Azul y Rojo para ESCOM
+      }],
+    };
+  
+    const dataUbicacionSensoresCDA = {
+      datasets: [{
+        data: [1, 2], // Ajusta estos datos según tus ubicaciones de sensores
+        backgroundColor: ['#FF4500', '#d3d3d3'] // Azul y Verde para CDA
+      }],
+    };
+  
+    const dataPM1 = {
+      datasets: [{
+        data: [92, 85], // Ajusta estos datos según los niveles de PM1
+        backgroundColor: ['#FF5733', '#d3d3d3']
+      }],
+      labels: ['PM1', '']
+    };
+  
+    const dataPM25 = {
+      datasets: [{
+        data: [69, 62], // Ajusta estos datos según los niveles de PM2.5
+        backgroundColor: ['#FFC300', '#d3d3d3']
+      }],
+      labels: ['PM2.5', '']
+    };
+  
+    const dataPM10 = {
+      datasets: [{
+        data: [34, 27, 20], // Ajusta estos datos según los niveles de PM10
+        backgroundColor: ['#FF5733', '#d3d3d3']
+      }],
+      labels: ['PM10', '']
+    };
+  
+    // Opciones comunes para los gráficos
+    const options = {
+      cutout: '70%',
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    };
+  
+    // Configuración de los gráficos usando Chart.js
+    // Ubicación de sensores - UPIITA
+    new Chart(document.getElementById('ubicacion-sensores-1'), {
+      type: 'doughnut',
+      data: dataUbicacionSensores,
+      options: options
+    });
+  
+    // Ubicación de sensores - ESCOM
+    new Chart(document.getElementById('ubicacion-sensores-2'), {
+      type: 'doughnut',
+      data: dataUbicacionSensoresESCOM,
+      options: options
+    });
+  
+    // Ubicación de sensores - CDA
+    new Chart(document.getElementById('ubicacion-sensores-3'), {
+      type: 'doughnut',
+      data: dataUbicacionSensoresCDA,
+      options: options
+    });
+  
+    // PM1 - Columna 1
+    new Chart(document.getElementById('pm1-1'), {
+      type: 'doughnut',
+      data: dataPM1,
+      options: options
+    });
+  
+    // PM2.5 - Columna 1
+    new Chart(document.getElementById('pm25-1'), {
+      type: 'doughnut',
+      data: dataPM25,
+      options: options
+    });
+  
+    // PM10 - Columna 1
+    new Chart(document.getElementById('pm10-1'), {
+      type: 'doughnut',
+      data: dataPM10,
+      options: options
+    });
+  
+    // PM1 - Columna 2
+    new Chart(document.getElementById('pm1-2'), {
+      type: 'doughnut',
+      data: dataPM1,
+      options: options
+    });
+  
+    // PM2.5 - Columna 2
+    new Chart(document.getElementById('pm25-2'), {
+      type: 'doughnut',
+      data: dataPM25,
+      options: options
+    });
+  
+    // PM10 - Columna 2
+    new Chart(document.getElementById('pm10-2'), {
+      type: 'doughnut',
+      data: dataPM10,
+      options: options
+    });
+  
+    // PM1 - Columna 3
+    new Chart(document.getElementById('pm1-3'), {
+      type: 'doughnut',
+      data: dataPM1,
+      options: options
+    });
+  
+    // PM2.5 - Columna 3
+    new Chart(document.getElementById('pm25-3'), {
+      type: 'doughnut',
+      data: dataPM25,
+      options: options
+    });
+  
+    // PM10 - Columna 3
+    new Chart(document.getElementById('pm10-3'), {
+      type: 'doughnut',
+      data: dataPM10,
+      options: options
+    });
+    initializeChart('ubicacion-sensores-1', dataUbicacionSensores, options, 'recommendation-upiita');
+initializeChart('ubicacion-sensores-2', dataUbicacionSensoresESCOM, options, 'recommendation-escom');
+initializeChart('ubicacion-sensores-3', dataUbicacionSensoresCDA, options, 'recommendation-cda');
+
+initializeChart('pm1-1', dataPM, options);
+initializeChart('pm25-1', dataPM, options);
+initializeChart('pm10-1', dataPM, options);
+
+initializeChart('pm1-2', dataPM, options);
+initializeChart('pm25-2', dataPM, options);
+initializeChart('pm10-2', dataPM, options);
+
+initializeChart('pm1-3', dataPM, options);
+initializeChart('pm25-3', dataPM, options);
+initializeChart('pm10-3', dataPM, options);
+  </script>
+  
 </body>
+
 
 </html>
