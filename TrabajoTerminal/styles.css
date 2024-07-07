@@ -179,6 +179,8 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+
+
   }
 /* Estilos para los gráficos de dona */
 .donut-container {
@@ -253,6 +255,86 @@
   background-color: #d9534f; /* Rojo para mala calidad */
 }
 
+/* Estilos para el contenedor del gráfico y la descripción */
+.description-section {
+  font-family: 'Oswald', sans-serif; /* Cambiar la fuente si es necesario */
+  font-size: 20px; /* Ajustar el tamaño del texto principal */
+  line-height: 1.6; /* Ajustar el interlineado */
+  text-align: center; /* Centrar el texto */
+  margin-top: 20px; /* Separación superior */
+}
+
+.description-section h3 {
+  margin-bottom: 15px; /* Separación entre el título y el texto secundario */
+  font-size: 28px; /* Tamaño del título */
+}
+
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar contenido horizontalmente */
+  align-items: center;
+  width: 95%;
+ 
+}
+
+.chart-section {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center; /* Centrar el texto */
+  width: 60%;
+  margin-right: 3%;
+}
+
+#chart_div {
+  width: 71%; /* Ajusta el ancho del gráfico */
+  height: 80vh; /* Ajusta esta altura según sea necesario */
+  margin: 0 auto; /* Centra horizontalmente el gráfico */
+}
+
+
+.container-chart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribuye los elementos a los extremos */
+  align-items: center; /* Alinea los elementos arriba */
+  width: 85%;
+  margin: 20px auto;
+}
+
+.text-section {
+  flex: 1; /* Toma el espacio restante */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+.description-section2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px; /* Ajustar el tamaño del texto principal */
+  line-height: 1.6; /* Ajustar el interlineado */
+  text-align: center; 
+  margin-right: 20px; /* Separación entre la descripción y el gráfico */
+}
+
+.description-section2 h3 {
+  margin-bottom: 15px; /* Separación entre el título y el texto secundario */
+  font-size: 28px;
+}
+
+.chart-section2 {
+  width: 70%; /* Ancho del contenedor del gráfico */
+  
+}
+
+#chart_div2 {
+  width: 120%; /* Ajusta el ancho del gráfico dentro de su contenedor */
+  height: 500px; /* Ajusta esta altura según sea necesario */
+}
+
+
+
+
 /* Estilos para las tarjetas de noticias */
 .news-cards {
   padding: 20px;
@@ -275,13 +357,14 @@
   text-align: center;
 }
 
+
+
 .card img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto 10px;
 }
-
 
   /* Links */
 /* Footer */
